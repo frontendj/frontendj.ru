@@ -1,0 +1,12 @@
+{
+    "title": "Mitya Kuznetsov",
+    "url": "https://frontendj.ru/",
+    "language": "en",
+    "description": "A UI developer and swing dj in searches for the best flat white in London",
+    "feed": {
+        "subtitle": "I am writing about my experience with UI and (maybe) other things in my life",
+        "filename": "feed.xml",
+        "path": "/feed/rss.xml",
+        "id": "https://frontendj.ru/"
+    }
+}

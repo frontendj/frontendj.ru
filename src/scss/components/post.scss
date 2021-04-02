@@ -1,0 +1,36 @@
+.post {
+    max-width: 50em;
+}
+
+.post__title {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.post__info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.post__date {
+    margin-right: 10px;
+}
+
+.post__reading {
+    font-style: italic;
+}
+
+.post__content {
+    * + * {
+        margin-top: 1em;
+    }
+}
+
+.post__tag {
+    font-size: 11px;
+    display: inline-block;
+    padding: 2px;
+    background-color: #F5EFEF;
+    margin: 0 4px;
+}

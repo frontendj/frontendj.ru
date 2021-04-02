@@ -1,0 +1,13 @@
+---
+layout: layouts/home.njk
+permalink: /posts/
+eleventyExcludeFromCollections: true
+---
+<section class="post">
+    <h1 class="post__title">Archive</h1>
+
+    <div class="post__content">
+        {% set postslist = collections.posts %}
+        {% include "postslist.njk" %}
+    </div>
+</section>

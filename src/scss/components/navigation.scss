@@ -1,0 +1,29 @@
+.navigation__list {
+    display: flex;
+    align-items: center;
+}
+
+.navigation__item {
+    & + & {
+        margin-left: 16px;
+    }
+
+    a {
+        text-decoration: underline;
+        text-decoration-color: rgba(0, 0, 0, .2);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+        display: block;
+        padding: 4px;
+        border-radius: 4px;
+
+        &:hover {
+            text-decoration-color: rgba(0, 0, 0, .9);
+        }
+    }
+
+    &.is-active a {
+        text-decoration: none;
+        background-color: #f1eded;
+    }
+}
