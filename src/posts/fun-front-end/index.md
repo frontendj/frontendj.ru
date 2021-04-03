@@ -4,7 +4,7 @@ date: 2021-03-19
 tags:
     - css
     - fun
-layout: layouts/post.njk
+layout: post.njk
 cover: images/cover.png
 ---
 

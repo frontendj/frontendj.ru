@@ -3,7 +3,7 @@ title: "Interface localisation: adapting text fields for RTL languages"
 date: 2020-12-17
 tags:
     - rtl
-layout: layouts/post.njk
+layout: post.njk
 redirect: https://medium.com/bumble-tech/interface-localisation-adapting-text-fields-for-rtl-languages-67a386006a17
 ---
 

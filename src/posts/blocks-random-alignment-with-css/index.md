@@ -3,7 +3,7 @@ title: Blocks' random alignment with CSS
 date: 2020-10-01
 tags:
     - css
-layout: layouts/post.njk
+layout: post.njk
 ---
 
 <p>Recently I had a nice CSS challenge - easy at first sight, but as usual, it happens, a bit tricky.</p>
