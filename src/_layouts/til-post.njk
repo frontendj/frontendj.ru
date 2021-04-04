@@ -1,0 +1,36 @@
+---
+layout: base.njk
+---
+<article class="post">
+    <h1 class="post__title">{{ title }}</h1>
+
+    <div class="post__info">
+        {%- if not page.noDate %}
+        <time class="post__date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+        {%- endif %}
+
+        <div class="post__reading">{{ content | readingTime({speed: 200}) }} to read</div>
+
+        <div class="post__tags">
+            {%- for tag in tags | filterTagList -%}
+                {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
+                <a href="{{ tagUrl | url }}" class="post__tag post-tag">{{ tag }}</a>
+            {%- endfor %}
+        </div>
+    </div>
+
+    <div class="post__content">
+        {{ content | safe }}
+    </div>
+
+    {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+    {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+    {%- if nextPost or previousPost %}
+    <div class="post__footer">
+        <ul>
+            {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+            {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+        </ul>
+    </div>
+    {%- endif %}
+</article>
