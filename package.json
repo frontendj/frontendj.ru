@@ -5,14 +5,15 @@
     "private": true,
     "scripts": {
         "watch:sass": "npm run sass -- --watch",
-        "watch:postcss": "postcss src/scss/index.css --use autoprefixer --watch -d _site/css",
+        "watch:postcss": "postcss src/scss/index.css --use autoprefixer -d _site/css --watch",
         "watch:eleventy": "eleventy --serve",
-        "build": "npm run sass && eleventy",
+        "build": "npm run sass --no-source-map && eleventy && npm run postcss",
         "watch": "eleventy --watch",
         "serve": "eleventy --serve",
         "start": "npm-run-all --parallel watch:*",
         "debug": "DEBUG=* eleventy",
-        "sass": "sass --style=compressed src/scss/index.scss src/scss/index.css"
+        "sass": "sass --style=compressed src/scss/index.scss src/scss/index.css",
+        "postcss": "postcss src/scss/index.css --use autoprefixer --no-map -d _site/css"
     },
     "license": "MIT",
     "devDependencies": {
