@@ -3,7 +3,7 @@ const fs = require('fs');
 
 module.exports = function(eleventyConfig) {
     // Copy files to public directory
-    eleventyConfig.addPassthroughCopy('src/scss/**/*.css');
+    eleventyConfig.addPassthroughCopy('src/styles/**/*.css');
     eleventyConfig.addPassthroughCopy('src/scripts');
     eleventyConfig.addPassthroughCopy('src/**/*.(html|jpg|png|gif|webp|avif|ico|svg|mp4|xml)');
 

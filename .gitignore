@@ -1,6 +1,6 @@
 _site/
 node_modules/
 package-lock.json
-src/scss/example/example.scss
-src/scss/index.css
-src/scss/index.css.map
+src/styles/example/example.scss
+src/styles/index.css
+src/styles/index.css.map
