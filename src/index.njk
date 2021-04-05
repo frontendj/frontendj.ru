@@ -3,6 +3,8 @@ layout: home.njk
 eleventyNavigation:
     key: Home
     order: 1
+isIndex: true
+title: Frontendj.ru
 ---
 {% set postslist = collections.posts | head(-30) %}
 {% set postslistCounter = collections.posts | length %}
