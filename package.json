@@ -28,6 +28,7 @@
     },
     "dependencies": {
         "autoprefixer": "^10.2.5",
+        "eleventy-critical-css": "^0.2.3",
         "eleventy-plugin-reading-time": "0.0.1",
         "html-minifier": "^4.0.0",
         "postcss": "^8.2.9",
