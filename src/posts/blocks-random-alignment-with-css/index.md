@@ -2,7 +2,7 @@
 title: Blocks' random alignment with CSS
 date: 2020-10-01
 tags:
-    - css
+    - CSS
 layout: post.njk
 ---
 

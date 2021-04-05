@@ -5,12 +5,14 @@
                 <code>{{ post.url }}</code>{% endif %}
             </a>
 
-            <time class="posts__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-
-            {% for tag in post.data.tags | filterTagList %}
-                {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-                <a href="{{ tagUrl | url }}" class="posts__tag">{{ tag }}</a>
-            {% endfor %}
+            <p class="posts__info">
+                <time class="posts__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+                <span aria-label="with tags:"> / </span>
+                {% for tag in post.data.tags | filterTagList %}
+                    {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+                    <a href="{{ tagUrl | url }}" class="posts__tag" rel="tag"><span aria-label="Tag">#</span>{{ tag }}</a>
+                {% endfor %}
+            </p>
         </li>
     {% endfor %}
 </ol>

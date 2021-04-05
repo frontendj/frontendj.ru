@@ -2,8 +2,8 @@
 title: Fun front end
 date: 2021-03-19
 tags:
-    - css
-    - fun
+    - CSS
+    - Fun
 layout: post.njk
 cover: images/cover.png
 ---

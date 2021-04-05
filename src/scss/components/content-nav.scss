@@ -1,0 +1,13 @@
+.content-nav {
+    display: flex;
+
+    a {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.content-nav__next {
+    margin-left: auto;
+    order: 1;
+}

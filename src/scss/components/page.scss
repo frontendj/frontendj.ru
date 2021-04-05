@@ -1,9 +1,12 @@
-.page__content {
-    padding: 0 var(--page-gap-horizontal);
-    margin-top: 16px;
-}
-
 .page__title {
     font-size: 2rem;
     margin-bottom: 12px;
+}
+
+.page__content {
+    padding: 0 var(--page-gap-horizontal);
+    margin-top: 16px;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
 }

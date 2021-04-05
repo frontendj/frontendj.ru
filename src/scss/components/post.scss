@@ -1,5 +1,8 @@
 .post {
     max-width: 50em;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
 }
 
 .post__title {
@@ -13,24 +16,34 @@
     margin-bottom: 24px;
 }
 
-.post__date {
-    margin-right: 10px;
-}
-
 .post__reading {
-    font-style: italic;
+    &::before {
+        content: '/';
+        display: inline-block;
+        margin: 0 8px;
+    }
 }
 
 .post__content {
+    flex: 1 0 auto;
+
     * + * {
         margin-top: 1em;
     }
 }
 
+.post__tags {
+    margin: 0 0 20px;
+}
+
 .post__tag {
-    font-size: 11px;
     display: inline-block;
-    padding: 2px;
-    background-color: #F5EFEF;
-    margin: 0 4px;
+
+    & + & {
+        margin-left: 8px;
+    }
+}
+
+.post__footer {
+    padding: 40px 0 var(--page-gap-vertical);
 }

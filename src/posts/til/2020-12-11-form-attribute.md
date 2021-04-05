@@ -4,7 +4,7 @@ date: 2020-12-12
 tags:
     - til
     - html
-layout: til-post.njk
+layout: post.njk
 ---
 
 <p>You can submit forms from a button outside of the form tag by using the form attribute (<a href="https://twitter.com/m1guelpf/status/1330374315058073600">source and discussion)</a></p>
