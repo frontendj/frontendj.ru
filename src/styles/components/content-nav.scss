@@ -1,13 +1,35 @@
 .content-nav {
     display: flex;
+}
 
-    a {
-        display: flex;
-        align-items: center;
+.content-nav__item--prev {
+    .content-nav__link {
+        &::before {
+            content: '←';
+            left: -4px;
+            transform: translate(-100%, -50%);
+        }
     }
 }
 
-.content-nav__next {
+.content-nav__item--next {
     margin-left: auto;
     order: 1;
+
+    .content-nav__link {
+        &::before {
+            content: '→';
+            right: -4px;
+            transform: translate(100%, -50%);
+        }
+    }
+}
+
+.content-nav__link {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        top: 50%;
+    }
 }

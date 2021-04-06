@@ -25,7 +25,7 @@
     <body>
         <header class="header">
             <h1 class="header__home">
-                <a class="header__home-link {% if page.url == '/' %} is-active {% endif %}" href="{{ '/' | url }}">
+                <a class="header__home-link link {% if page.url == '/' %} is-active {% endif %}" href="{{ '/' | url }}">
                     <img class="header__photo" src="/images/menu-photo.jpg" srcset="/images/menu-photo.jpg 1x, /images/menu-photo@2x.jpg 2x" width="48" height="48">
 
                     <div class="header__home-text">
@@ -39,7 +39,7 @@
                     {%- for entry in collections.all | eleventyNavigation %}
                         {% if entry.url !== "/" %}
                             <li class="navigation__item {% if entry.url == page.url %} is-active {% endif %}">
-                                <a href="{{ entry.url | url }}" {% if entry.url == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
+                                <a class="link" href="{{ entry.url | url }}" {% if entry.url == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
                             </li>
                         {% endif %}
                     {%- endfor %}

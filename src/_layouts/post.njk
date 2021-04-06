@@ -25,7 +25,7 @@ layout: base.njk
         <div class="post__tags" aria-label="Post tags">
             {%- for tag in tags | filterTagList -%}
                 {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
-                <a href="{{ tagUrl | url }}" class="post__tag">
+                <a href="{{ tagUrl | url }}" class="post__tag link">
                     <span aria-label="Tag">#</span>{{ tag }}
                 </a>
             {%- endfor %}
@@ -36,18 +36,16 @@ layout: base.njk
             <nav aria-label="Post navigation">
                 <ul class="content-nav">
                     {%- if nextPost %}
-                        <li class="content-nav__next">
-                            <a href="{{ nextPost.url | url }}" aria-label="Next post — {{ nextPost.data.title }}">
+                        <li class="content-nav__item content-nav__item--next">
+                            <a class="content-nav__link link" href="{{ nextPost.url | url }}" aria-label="Next post — {{ nextPost.data.title }}">
                                 {{ nextPost.data.title }}
-                                <span aria-hidden="true">→</span>
                             </a>
                         </li>
                     {% endif %}
 
                     {%- if previousPost %}
-                        <li class="content-nav__prev">
-                            <a href="{{ previousPost.url | url }}" aria-label="Previous post — {{ previousPost.data.title }}">
-                                <span aria-hidden="true">←</span>
+                        <li class="content-nav__item content-nav__item--prev">
+                            <a class="content-nav__link link" href="{{ previousPost.url | url }}" aria-label="Previous post — {{ previousPost.data.title }}">
                                 {{ previousPost.data.title }}
                             </a>
                         </li>
