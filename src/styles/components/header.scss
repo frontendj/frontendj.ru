@@ -3,6 +3,9 @@
     align-items: center;
     padding: 8px var(--page-gap-horizontal);
     flex: 0 0 auto;
+    max-width: calc(var(--page-max-width) + 2 * var(--page-gap-horizontal));
+    width: 100%;
+    margin: 0 auto;
 }
 
 .header__photo {

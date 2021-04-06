@@ -4,6 +4,7 @@ $token-font-family-system: system-ui, -apple-system,  BlinkMacSystemFont, 'Segoe
     --font-family-system: #{$token-font-family-system};
     --page-gap-horizontal: 20px;
     --page-gap-vertical: 20px;
+    --page-max-width: 1200px;
 
     /* Colors */
     --base-blue: 226, 48%;

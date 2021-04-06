@@ -1,9 +1,9 @@
 ---
-title: "TIL: 12 Dec - Form attribute"
+title: "TIL: Form attribute"
 date: 2020-12-12
 tags:
-    - til
-    - html
+    - TIL
+    - HTML
 layout: post.njk
 ---
 
