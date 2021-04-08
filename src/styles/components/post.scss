@@ -26,10 +26,6 @@
 
 .post__content {
     flex: 1 0 auto;
-
-    * + * {
-        margin-top: 1em;
-    }
 }
 
 .post__tags {

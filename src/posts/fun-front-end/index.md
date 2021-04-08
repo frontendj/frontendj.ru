@@ -36,11 +36,15 @@ cover: images/cover.png
 
 <p>This one is fun. Overflow: hidden, some clip-path and we can cut emojis, combine particles, create crazy combinations. Pure joy.</p>
 
-<img src="./images/combined-emojis.png" alt=""/>
+<figure>
+    <img src="./images/combined-emojis.png" alt=""/>
+</figure>
 
 <p>Unfortunately emoji change from platform to platform, but compared to Windows, the results aren't terrible.</p>
 
-<img src="./images/combined-emojis-windows.png" alt=""/>
+<figure>
+    <img src="./images/combined-emojis-windows.png" alt=""/>
+</figure>
 
 <h2>The talking favicon in 256 bytes</h2>
 
@@ -70,7 +74,9 @@ cover: images/cover.png
         <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The talking favicon in 256 bytes:<a href="https://t.co/DpGnPe5OTy">https://t.co/DpGnPe5OTy</a><br><br>Source:<br><br>&lt;link rel=icon id=i&gt;<br>&lt;body onload=&quot;setInterval(_=&gt;i.href=&grave;data:image/svg+xml,&lt;svg xmlns=%27http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 16 16&#39;&gt;&lt;text y=&#39;16&#39;&gt;&dollar;{[...&#39;😮😀😁😐😑😬&#39;][&plus;&plus;x&percnt;6]}&lt;/text&gt;&lt;/svg&gt;&grave;,x&equals;9)&quot;&gt; <a href="https://t.co/0RlhqeluId">pic.twitter.com/0RlhqeluId</a></p>&mdash; Martin Kleppe (@aemkei) <a href="https://twitter.com/aemkei/status/1242211870448259072?ref_src=twsrc%5Etfw">March 23, 2020</a></blockquote>
 </div>
 
-<img src="./images/animated-favicon.gif" alt=""/>
+<figure>
+    <img src="./images/animated-favicon.gif" alt=""/>
+</figure>
 
 <p><strong>Bonus</strong></p>
 
@@ -83,8 +89,10 @@ cover: images/cover.png
 
 https://juwain.dev/posts/js-in-css-2/
 
-<img src="./images/js-in-css.gif" alt=""/>
-<small>Credits: juwain.dev</small>
+<figure>
+    <img src="./images/js-in-css.gif" alt=""/>
+    <figcaption>Credits: juwain.dev</figcaption>
+</figure>
 
 <h2>Using CSS without HTML</h2>
 
@@ -94,8 +102,10 @@ https://juwain.dev/posts/js-in-css-2/
 
 <p>Apparently, some browsers understand a special HTTP Header Link, in which we can pass CSS code without an actual CSS file. And CSS already can contain everything, including meaningful text content in pseudo-elements.</p>
 
-<img src="./images/header-link.jpg" alt=""/>
-<small>Credits: csstricks.com</small>
+<figure>
+    <img src="./images/header-link.jpg" alt=""/>
+    <figcaption>Credits: csstricks.com</figcaption>
+</figure>
 
 <p>And here there is a nice example of what can be done in CSS without a line of HTML. Everything is easy, I just keep forgetting that a lot of stuff can be put directly into CSS notation.</p>
 

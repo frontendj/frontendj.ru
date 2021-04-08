@@ -5,7 +5,7 @@ title: Features log and TODO
 ---
 
 <article class="post">
-<h1 class="post__title">Features log and TODO</h1>
+<h1 class="post__title header-1">Features log and TODO</h1>
 <pre>
 [x] open graph
 [x] development favicon
