@@ -2,12 +2,12 @@
 @import '_mixins';
 @import 'reset';
 @import 'prism-default';
+@import 'components/core';
 @import 'components/helpers';
 @import 'components/page';
 @import 'components/header';
 @import 'components/navigation';
 @import 'components/posts';
 @import 'components/post';
-@import 'components/core';
 @import 'components/content-nav';
-
+@import 'components/formatted-text';

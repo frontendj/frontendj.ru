@@ -1,7 +1,7 @@
 <ol class="posts">
     {% for post in postslist | reverse %}
         <li class="posts__item {% if post.url == url %} is-active {% endif %}">
-            <a href="{% if post.data.redirect %} {{ post.data.redirect }} {% else %} {{ post.url | url }} {% endif %}" class="posts__link">{% if post.data.title %}{{ post.data.title }}{% else %}
+            <a class="posts__link link link--has-visited" href="{% if post.data.redirect %} {{ post.data.redirect }} {% else %} {{ post.url | url }} {% endif %}">{% if post.data.title %}{{ post.data.title }}{% else %}
                 <code>{{ post.url }}</code>{% endif %}
             </a>
 
@@ -10,7 +10,7 @@
                 <span aria-label="with tags:"> / </span>
                 {% for tag in post.data.tags | filterTagList %}
                     {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-                    <a href="{{ tagUrl | url }}" class="posts__tag" rel="tag"><span aria-label="Tag">#</span>{{ tag }}</a>
+                    <a href="{{ tagUrl | url }}" class="posts__tag link" rel="tag"><span aria-label="Tag">#</span>{{ tag }}</a>
                 {% endfor %}
             </p>
         </li>

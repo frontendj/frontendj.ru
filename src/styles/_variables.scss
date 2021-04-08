@@ -8,10 +8,13 @@ $token-font-family-system: system-ui, -apple-system,  BlinkMacSystemFont, 'Segoe
 
     /* Colors */
     --base-blue: 226, 48%;
+    --base-purple: 270, 60%;
     --color-primary: hsla(var(--base-blue), 60%, 100%);
+
     --color-link-base: var(--base-blue);
+    --color-link-visited-base: var(--base-purple);
     --color-link: hsla(var(--color-link-base), 60%, 100%);
     --color-link-hover: hsla(var(--color-link-base), 50%, 100%);
-    --color-link-visited: hsla(var(--color-link-base), 40%, 100%);
+    --color-link-visited: hsla(var(--color-link-visited-base), 40%, 100%);
 }
 

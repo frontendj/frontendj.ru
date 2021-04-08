@@ -13,7 +13,7 @@ layout: base.njk
         <div class="post__reading" aria-hidden="true">{{ content | readingTime({speed: 200}) }} to read</div>
     </div>
 
-    <div class="post__content">
+    <div class="post__content formatted-text">
         {{ content | safe }}
     </div>
 
@@ -37,7 +37,7 @@ layout: base.njk
                 <ul class="content-nav">
                     {%- if nextPost %}
                         <li class="content-nav__item content-nav__item--next">
-                            <a class="content-nav__link link" href="{{ nextPost.url | url }}" aria-label="Next post — {{ nextPost.data.title }}">
+                            <a class="content-nav__link link link--has-visited" href="{{ nextPost.url | url }}" aria-label="Next post — {{ nextPost.data.title }}">
                                 {{ nextPost.data.title }}
                             </a>
                         </li>
@@ -45,7 +45,7 @@ layout: base.njk
 
                     {%- if previousPost %}
                         <li class="content-nav__item content-nav__item--prev">
-                            <a class="content-nav__link link" href="{{ previousPost.url | url }}" aria-label="Previous post — {{ previousPost.data.title }}">
+                            <a class="content-nav__link link link--has-visited" href="{{ previousPost.url | url }}" aria-label="Previous post — {{ previousPost.data.title }}">
                                 {{ previousPost.data.title }}
                             </a>
                         </li>
