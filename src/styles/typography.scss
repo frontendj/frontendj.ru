@@ -1,81 +1,108 @@
+/* @link https://utopia.fyi/type/calculator?c=320,13,1.182,900,16,1.231,4,1,&s=0.75|0.5|0.25,1.5|2|3|4|6, */
+
 $typography: (
     'header-1': (
         'font-weight': 600,
-        'font-size-mobile-min': 26px,
-        'font-size-mobile-max': 30px,
-        'line-height': 1.4,
-        'font-size-desktop-min': 30px,
-        'font-size-desktop-max': 36px,
+        'line-height': 1.2,
+        'font-size': var(--step-4),
     ),
     'header-2': (
         'font-weight': 600,
-        'font-size-mobile-min': 22px,
-        'font-size-mobile-max': 26px,
-        'line-height': 1.32,
-        'font-size-desktop-min': 26px,
-        'font-size-desktop-max': 30px,
+        'line-height': 1.2,
+        'font-size': var(--step-3),
     ),
     'header-3': (
         'font-weight': 600,
-        'font-size-mobile-min': 18px,
-        'font-size-mobile-max': 20px,
-        'line-height': 1.26,
-        'font-size-desktop-min': 20px,
-        'font-size-desktop-max': 24px,
+        'line-height': 1.2,
+        'font-size': var(--step-2)
+    ),
+    'header-4': (
+        'font-weight': 600,
+        'line-height': 1.2,
+        'font-size': var(--step-1)
     ),
     'p-1': (
-        'font-size-mobile-min': 14px,
-        'font-size-mobile-max': 14px,
         'line-height': 1.3,
-        'font-size-desktop-min': 14px,
-        'font-size-desktop-max': 16px,
+        'font-size': var(--step-0)
     ),
     'p-2': (
-        'font-size-mobile-min': 12px,
-        'font-size-mobile-max': 12px,
         'line-height': 1.3,
-        'font-size-desktop-min': 12px,
-        'font-size-desktop-max': 14px,
+        'font-size': var(--step--1)
     ),
 );
 
-$mobileBottomBreakpoint: 320px;
-$desktopBottomBreakpoint: 600px;
-$desktopTopBreakpoint: 1200px;
+:root {
+    --fluid-min-width: 320;
+    --fluid-max-width: 900;
 
-// Implementation for responsive typography is taken from
-// https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case
-@function responsive-typo($breakpointMin, $breakpointMax, $fontSizeMin, $fontSizeMax) {
-    $slope: ($fontSizeMax - $fontSizeMin) / ($breakpointMax - $breakpointMin);
-    $yAxisIntersection: -1 * $breakpointMin * $slope + $fontSizeMin;
-
-    // --resize-speed allows to increase speed of resize in case when we need the text to be resized more quick
-    @return clamp(#{$fontSizeMin}, calc((#{$yAxisIntersection} + #{$slope * 100}vw) * var(--resize-speed, 1)), #{$fontSizeMax});
+    --fluid-screen: 100vw;
+    --fluid-bp: calc(
+        (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
+        (var(--fluid-max-width) - var(--fluid-min-width))
+    );
 }
+
+@media screen and (min-width: 900px) {
+    :root {
+        --fluid-screen: calc(var(--fluid-max-width) * 1px);
+    }
+}
+
+:root {
+    --f--1-min: 11.00;
+    --f--1-max: 13.00;
+    --step--1: calc(
+        ((var(--f--1-min) / 16) * 1rem) + (var(--f--1-max) - var(--f--1-min)) *
+        var(--fluid-bp)
+    );
+
+    --f-0-min: 13.00;
+    --f-0-max: 16.00;
+    --step-0: calc(
+        ((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) *
+        var(--fluid-bp)
+    );
+
+    --f-1-min: 15.37;
+    --f-1-max: 19.70;
+    --step-1: calc(
+        ((var(--f-1-min) / 16) * 1rem) + (var(--f-1-max) - var(--f-1-min)) *
+        var(--fluid-bp)
+    );
+
+    --f-2-min: 18.16;
+    --f-2-max: 24.25;
+    --step-2: calc(
+        ((var(--f-2-min) / 16) * 1rem) + (var(--f-2-max) - var(--f-2-min)) *
+        var(--fluid-bp)
+    );
+
+    --f-3-min: 21.47;
+    --f-3-max: 29.85;
+    --step-3: calc(
+        ((var(--f-3-min) / 16) * 1rem) + (var(--f-3-max) - var(--f-3-min)) *
+        var(--fluid-bp)
+    );
+
+    --f-4-min: 25.38;
+    --f-4-max: 36.74;
+    --step-4: calc(
+        ((var(--f-4-min) / 16) * 1rem) + (var(--f-4-max) - var(--f-4-min)) *
+        var(--fluid-bp)
+    );
+}
+
 
 @mixin font-size($key, $isStatic: false) {
     $props: map-get($typography, $key);
-    $fontSizeMobileMin: map-get($props, font-size-mobile-min);
-    $fontSizeMobileMax: map-get($props, font-size-mobile-max);
-    $fontSizeDesktopMin: map-get($props, font-size-desktop-min);
-    $fontSizeDesktopMax: map-get($props, font-size-desktop-max);
 
     @if $isStatic {
-        @media (min-width: $desktopBottomBreakpoint + 1px) {
-            --font-size: #{$fontSizeDesktopMax};
-        }
-    }
-    @else {
-        --font-size: #{responsive-typo($mobileBottomBreakpoint, $desktopBottomBreakpoint, $fontSizeMobileMin, $fontSizeMobileMax)};
-
-        @media (min-width: $desktopBottomBreakpoint + 1px) {
-            --font-size: #{responsive-typo($desktopBottomBreakpoint, $desktopTopBreakpoint, $fontSizeDesktopMin, $fontSizeDesktopMax)};
-        }
+        // TODO: add ability to pass static value
     }
 
     font-family: map-get($props, font-family);
     font-weight: map-get($props, font-weight);
-    font-size: var(--font-size, #{map-get($props, font-size-mobile-min)});
+    font-size: var(--font-size, #{map-get($props, font-size)});
     line-height: var(--line-height, #{map-get($props, line-height)});
     // safari clamp bug
     // https://stackoverflow.com/questions/37070694/font-size-calc-dynamic-size-safari-failing
@@ -91,6 +118,9 @@ $desktopTopBreakpoint: 1200px;
 }
 @mixin apply-typography-header3($isStatic: false) {
     @include font-size('header-3', $isStatic);
+}
+@mixin apply-typography-header4($isStatic: false) {
+    @include font-size('header-4', $isStatic);
 }
 @mixin apply-typography-p1($isStatic: false) {
     @include font-size('p-1', $isStatic);
@@ -109,6 +139,10 @@ $desktopTopBreakpoint: 1200px;
 
 .header-3 {
     @include apply-typography-header3();
+}
+
+.header-4 {
+    @include apply-typography-header4();
 }
 
 .p-1 {
