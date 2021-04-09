@@ -2,13 +2,19 @@
 
 :root {
     --fluid-min-width: 320;
-    --fluid-max-width: 900;
+    --fluid-max-width: 600;
 
     --fluid-screen: 100vw;
-    --fluid-bp: calc((var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) / (var(--fluid-max-width) - var(--fluid-min-width)));
+    --fluid-bp: 0rem;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 320px) {
+    :root {
+        --fluid-bp: calc((var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) / (var(--fluid-max-width) - var(--fluid-min-width)));
+    }
+}
+
+@media screen and (min-width: 600px) {
     :root {
         --fluid-screen: calc(var(--fluid-max-width) * 1px);
     }
