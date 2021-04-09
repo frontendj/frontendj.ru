@@ -33,7 +33,7 @@ $typography: (
 
 :root {
     --fluid-min-width: 320;
-    --fluid-max-width: 900;
+    --fluid-max-width: 600;
 
     --fluid-screen: 100vw;
     --fluid-bp: calc(
@@ -42,7 +42,7 @@ $typography: (
     );
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 600px) {
     :root {
         --fluid-screen: calc(var(--fluid-max-width) * 1px);
     }
