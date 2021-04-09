@@ -8,7 +8,7 @@
     align-items: baseline;
 
     & + & {
-        margin-top: 8px;
+        margin-top: var(--space-2xs);
     }
 }
 

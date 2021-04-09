@@ -1,12 +1,12 @@
 .page__title {
     font-size: 2rem;
-    margin-bottom: 12px;
+    margin-bottom: var(--space-xs);
 }
 
 .page__content {
     padding: 0 var(--page-gap-horizontal);
     max-width: calc(var(--page-max-width) + 2 * var(--page-gap-horizontal));
-    margin: 16px auto 0;
+    margin: var(--space-s) auto 0;
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;

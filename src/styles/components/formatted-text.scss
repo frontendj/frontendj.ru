@@ -2,7 +2,7 @@
     @include apply-typography-p1();
 
     * + * {
-        margin-top: 1em;
+        margin-top: var(--space-m);
     }
 
     a {
@@ -24,7 +24,7 @@
     figcaption {
         @include apply-typography-p2();
 
-        margin-top: 0.5em;
+        margin-top: var(--space-xs);
         font-style: italic;
     }
 }

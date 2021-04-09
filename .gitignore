@@ -4,3 +4,4 @@ package-lock.json
 src/styles/example/example.scss
 src/styles/index.css
 src/styles/index.css.map
+.DS_Store

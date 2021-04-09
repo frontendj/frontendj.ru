@@ -6,14 +6,13 @@
 }
 
 .post__title {
-    font-size: 2rem;
-    margin-bottom: 12px;
+    margin-bottom: var(--space-xs);
 }
 
 .post__info {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 24px;
+    margin-bottom: var(--space-m);
 }
 
 .post__reading {
@@ -29,7 +28,7 @@
 }
 
 .post__tags {
-    margin: 0 0 20px;
+    margin: 0 0 var(--space-m);
 }
 
 .post__tag {
