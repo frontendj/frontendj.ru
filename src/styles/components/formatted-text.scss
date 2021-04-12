@@ -5,6 +5,14 @@
         margin-top: var(--space-m);
     }
 
+    h2 {
+        margin-top: var(--space-xl);
+    }
+
+    h3 {
+        margin-top: var(--space-l);
+    }
+
     a {
         @include simpleLink(true);
     }

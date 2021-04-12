@@ -27,6 +27,7 @@
 
 .content-nav__link {
     position: relative;
+    display: block; // prevent from hovered link blinking
 
     &::before {
         position: absolute;

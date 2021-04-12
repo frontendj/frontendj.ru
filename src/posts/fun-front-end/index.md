@@ -16,7 +16,7 @@ cover: images/cover.png
 
 <h2>Animation URLs with javascript and emojis</h2>
 
-<p>https://matthewrayfield.com/articles/animating-urls-with-javascript-and-emojis/</p>
+https://matthewrayfield.com/articles/animating-urls-with-javascript-and-emojis/
 
 <img src="./images/animated-url.gif" alt=""/>
 
@@ -98,7 +98,7 @@ https://juwain.dev/posts/js-in-css-2/
 
 <p>The craziest techniques. I guess it's more about knowing the principles of browsers work, which is definitely an important skill in our profession. But also having pure, not ready for production fun🙂</p>
 
-<p>https://css-tricks.com/using-css-without-html/</p>
+https://css-tricks.com/using-css-without-html/
 
 <p>Apparently, some browsers understand a special HTTP Header Link, in which we can pass CSS code without an actual CSS file. And CSS already can contain everything, including meaningful text content in pseudo-elements.</p>
 
