@@ -36,42 +36,42 @@ $typography: (
     --f--1-min: 12.00;
     --f--1-max: 15.00;
     --step--1: calc(
-        ((var(--f--1-min) / 16) * 1rem) + (var(--f--1-max) - var(--f--1-min)) *
+        ((var(--f--1-min) / var(--ppr, 16)) * 1rem) + (var(--f--1-max) - var(--f--1-min)) *
         var(--fluid-bp)
     );
 
     --f-0-min: 14.00;
     --f-0-max: 18.00;
     --step-0: calc(
-        ((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) *
+        ((var(--f-0-min) / var(--ppr, 16)) * 1rem) + (var(--f-0-max) - var(--f-0-min)) *
         var(--fluid-bp)
     );
 
     --f-1-min: 16.33;
     --f-1-max: 21.60;
     --step-1: calc(
-        ((var(--f-1-min) / 16) * 1rem) + (var(--f-1-max) - var(--f-1-min)) *
+        ((var(--f-1-min) / var(--ppr, 16)) * 1rem) + (var(--f-1-max) - var(--f-1-min)) *
         var(--fluid-bp)
     );
 
     --f-2-min: 19.06;
     --f-2-max: 25.92;
     --step-2: calc(
-        ((var(--f-2-min) / 16) * 1rem) + (var(--f-2-max) - var(--f-2-min)) *
+        ((var(--f-2-min) / var(--ppr, 16)) * 1rem) + (var(--f-2-max) - var(--f-2-min)) *
         var(--fluid-bp)
     );
 
     --f-3-min: 22.23;
     --f-3-max: 31.10;
     --step-3: calc(
-        ((var(--f-3-min) / 16) * 1rem) + (var(--f-3-max) - var(--f-3-min)) *
+        ((var(--f-3-min) / var(--ppr, 16)) * 1rem) + (var(--f-3-max) - var(--f-3-min)) *
         var(--fluid-bp)
     );
 
     --f-4-min: 25.94;
     --f-4-max: 37.32;
     --step-4: calc(
-        ((var(--f-4-min) / 16) * 1rem) + (var(--f-4-max) - var(--f-4-min)) *
+        ((var(--f-4-min) / var(--ppr, 16)) * 1rem) + (var(--f-4-max) - var(--f-4-min)) *
         var(--fluid-bp)
     );
 }

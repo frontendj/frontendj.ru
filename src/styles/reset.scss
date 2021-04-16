@@ -28,6 +28,8 @@ dd {
 /* Set core body defaults */
 body {
     min-height: 100vh;
+    min-height: -webkit-fill-available;
+    min-height: -moz-available;
     scroll-behavior: smooth;
 }
 
