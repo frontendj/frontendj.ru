@@ -15,7 +15,6 @@
         <title>{{ title or metadata.title }}</title>
         <meta name="description" content="{{ description or metadata.description }}">
         <link rel="stylesheet" href="{{ '/styles/index.css' | url }}">
-        <script async src="{{ '/scripts/index.js' | url }}"></script>
         <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
 
         {% include 'favicon.njk' %}
@@ -51,5 +50,7 @@
         <main class="page__content">
             {{ content | safe }}
         </main>
+
+        <script async src="{{ '/scripts/index.js' | url }}"></script>
     </body>
 </html>

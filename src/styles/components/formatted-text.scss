@@ -35,4 +35,8 @@
         margin-top: var(--space-xs);
         font-style: italic;
     }
+
+    pre {
+        @include apply-typography-p2();
+    }
 }

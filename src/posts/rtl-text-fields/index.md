@@ -8,3 +8,5 @@ redirect: https://medium.com/bumble-tech/interface-localisation-adapting-text-fi
 ---
 
 In this article, I tell about several minor but interesting issues we discovered when adapting HTML forms on the Badoo.com site for Hebrew and Arabic.
+
+https://medium.com/bumble-tech/interface-localisation-adapting-text-fields-for-rtl-languages-67a386006a17

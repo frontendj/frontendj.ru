@@ -59,15 +59,13 @@ https://matthewrayfield.com/articles/animating-urls-with-javascript-and-emojis/
 
 
 ``` html
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💩</text></svg>">
-
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💩</text></svg>">
 ```
 
 <p>And with a short piece of javascript the favicon gets an animated emoji 😎</p>
 
 ``` html
-    <body onload="setInterval(_=>i.href=`data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14'>${[...'😮😀😁😐😑😬'][++x%6]}</text></svg>`,x=9)">
-
+<body onload="setInterval(_=>i.href=`data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14'>${[...'😮😀😁😐😑😬'][++x%6]}</text></svg>`,x=9)">
 ```
 
 <div class="snippet">
@@ -81,7 +79,6 @@ https://matthewrayfield.com/articles/animating-urls-with-javascript-and-emojis/
 <p><strong>Bonus</strong></p>
 
 <p>These cute animations reminded me of something very old. Very old, very useless but so cool. This library (http://lab.ejci.net/favico.js/) allows you to play video within a favicon (yay, one step to Doom) o_O. How crazy is that?</p>
-
 
 <h2>JS in CSS</h2>
 

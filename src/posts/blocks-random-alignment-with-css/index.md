@@ -33,13 +33,13 @@ layout: post.njk
 <p>I could try to generate just a random number within some reasonable range and try to shift the text blocks with its help. But in this case, I would have to adjust the maximum width for the blocks, otherwise, they will go beyond the boundaries of the parent.</p>
 
 ``` css
-        @for $i from 1 through 4 {
-            .item:nth-child(#{$i}) {
-                $random: random(30) - 15; // getting a shift between -15px and 15px
-                margin-left: $random + px;
-                max-width: calc(100% - #{2 * abs($random)}px);
-            }
-        }
+@for $i from 1 through 4 {
+    .item:nth-child(#{$i}) {
+        $random: random(30) - 15; // getting a shift between -15px and 15px
+        margin-left: $random + px;
+        max-width: calc(100% - #{2 * abs($random)}px);
+    }
+}
 ```
 
 <div class="snippet">
@@ -55,33 +55,33 @@ layout: post.njk
 <p>If we add blocks of random width before and after each tag, they will push and pull, and therefore balance the tag randomly. Also, they will shrink to zero width if the text block is too wide.</p>
 
 ``` css
-    .item {
-        display: flex;
+.item {
+    display: flex;
 
-        &::before,
-        &::after {
-            content: '';
-            flex: 1 1 auto;
-            background: red;
-            max-width: 40%;
-        }
-
-        &::after {
-            background: green;
-        }
+    &::before,
+    &::after {
+        content: '';
+        flex: 1 1 auto;
+        background: red;
+        max-width: 40%;
     }
 
-    @for $i from 1 through 4 {
-        .item:nth-child(#{$i}) {
-            &::before {
-                flex-grow: random(5);
-            }
+    &::after {
+        background: green;
+    }
+}
 
-            &::after {
-                flex-grow: random(5);
-            }
+@for $i from 1 through 4 {
+    .item:nth-child(#{$i}) {
+        &::before {
+            flex-grow: random(5);
+        }
+
+        &::after {
+            flex-grow: random(5);
         }
     }
+}
 ```
 
 <p>It works! Long tags displace balancers, and short tags are randomly aligned.</p>
@@ -97,10 +97,10 @@ layout: post.njk
 <p>I could stop at this, but still I would like to add some real dynamics to make the text blocks appear with a random shift every time the block is redrawn, and not just when the CSS is recompiled. So a little bit of javascript would be fine:</p>
 
 ``` js
-      [...document.getElementsByClassName('item')].forEach((item) => {
-            item.style.setProperty('--puller-grow', Math.random() * 5);
-            item.style.setProperty('--pusher-grow', Math.random() * 5);
-      });
+[...document.getElementsByClassName('item')].forEach((item) => {
+      item.style.setProperty('--puller-grow', Math.random() * 5);
+      item.style.setProperty('--pusher-grow', Math.random() * 5);
+});
 ```
 
 <div class="snippet">

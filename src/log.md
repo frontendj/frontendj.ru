@@ -13,15 +13,14 @@ title: Features log and TODO
 [x] tags
 [x] critical css
 [ ] color scheme
-[ ] typography
-[ ] post formatting
+[x] typography
+[x] post formatting
 [ ] dark theme
 [ ] about
 [ ] TIL section
 [ ] linters
     [ ] Stylelint
     [ ] ESLint
-[ ] netlify autorebuild
 [ ] precommit hooks
 [ ] share (twitter)
 [ ] custom font for headers?
@@ -31,7 +30,7 @@ title: Features log and TODO
 [ ] automatic lighthouse check
 [ ] Netlify
     [ ] headers for netlify
-[ ] service workers?
+    [ ] autorebuild
 [ ] web mentions
 [ ] styleguide
 [ ] codepen embed
