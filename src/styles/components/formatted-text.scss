@@ -39,4 +39,12 @@
     pre {
         @include apply-typography-p2();
     }
+
+    ul {
+        list-style: disc;
+    }
+
+    li + li {
+        margin-top: var(--space-xs);
+    }
 }
