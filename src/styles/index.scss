@@ -1,15 +1,26 @@
+// settings
 @import '_variables';
-@import '_mixins';
-@import 'reset';
-@import 'prism-default';
-@import 'typography';
 @import 'spacing';
+
+// tools
+@import '_mixins';
+
+// generic
+@import 'reset';
+
+// elements
 @import 'components/core';
+
+// objects
 @import 'components/helpers';
+@import 'typography';
+@import 'components/formatted-text';
+
+// components
 @import 'components/page';
 @import 'components/header';
 @import 'components/navigation';
 @import 'components/posts';
 @import 'components/post';
 @import 'components/content-nav';
-@import 'components/formatted-text';
+@import 'prism-default';
