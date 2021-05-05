@@ -121,5 +121,5 @@ layout: post.njk
       CSS random align - 5 - flex-basis animation</a> by Dmitry (<a href="https://codepen.io/frontendj">@frontendj</a>)
       on <a href="https://codepen.io">CodePen</a>.</span>
       </p>
-      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+      <script async src="https://static.codepen.io/assets/embed/ei.js" crossorigin></script>
 </div>
