@@ -7,10 +7,15 @@
 
             <p class="posts__info p-2">
                 <time class="posts__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-                <span aria-label="with tags:"> / </span>
+                <span aria-hidden="true"> / </span>
+                <span class="visually-hidden">with tags:</span>
+
                 {% for tag in post.data.tags | filterTagList %}
                     {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-                    <a href="{{ tagUrl | url }}" class="posts__tag link" rel="tag"><span aria-label="Tag">#</span>{{ tag }}</a>
+                    <a href="{{ tagUrl | url }}" class="posts__tag link" rel="tag">
+                        <span class="visually-hidden">Tag</span>
+                        <span aria-hidden="true">#</span>{{ tag }}
+                    </a>
                 {% endfor %}
             </p>
         </li>

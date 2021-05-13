@@ -22,11 +22,13 @@ layout: base.njk
     {%- if nextPost or previousPost or tags %}
     <div class="post__footer">
         {%- if tags %}
-        <div class="post__tags p-1" aria-label="Post tags">
+        <div class="post__tags p-1">
+            <span class="visually-hidden">Post tags</span>
             {%- for tag in tags | filterTagList -%}
                 {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
                 <a href="{{ tagUrl | url }}" class="post__tag link">
-                    <span aria-label="Tag">#</span>{{ tag }}
+                    <span class="visually-hidden">Tag</span>
+                    <span aria-hidden="true">#</span>{{ tag }}
                 </a>
             {%- endfor %}
         </div>
