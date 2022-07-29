@@ -18,7 +18,7 @@ cover: images/cover.png
 
 https://matthewrayfield.com/articles/animating-urls-with-javascript-and-emojis/
 
-<img src="./images/animated-url.gif" alt="Example of animated URL" />
+<img src="./images/animated-url.gif" alt="Animated URL." />
 
 <p>With javascript, we can change a page URL, and the part after # can be changed actually without redirecting anywhere. So placing ASCII symbols there or emojis we can draw funny animations. Pretty cool for a home project but I also can imagine it on a more serious project</p>
 
@@ -37,13 +37,13 @@ https://matthewrayfield.com/articles/animating-urls-with-javascript-and-emojis/
 <p>This one is fun. Overflow: hidden, some clip-path and we can cut emojis, combine particles, create crazy combinations. Pure joy.</p>
 
 <figure>
-    <img src="./images/combined-emojis.png" alt="Example of combined emojis" />
+    <img src="./images/combined-emojis.png" alt="Combined emojis." />
 </figure>
 
 <p>Unfortunately emoji change from platform to platform, but compared to Windows, the results aren't terrible.</p>
 
 <figure>
-    <img src="./images/combined-emojis-windows.png" alt="Example of combined emojis in MS Windows" />
+    <img src="./images/combined-emojis-windows.png" alt="Combined emojis in MS Windows." />
 </figure>
 
 <h2>The talking favicon in 256 bytes</h2>
@@ -73,7 +73,7 @@ https://matthewrayfield.com/articles/animating-urls-with-javascript-and-emojis/
 </div>
 
 <figure>
-    <img src="./images/animated-favicon.gif" alt="Example of animated favicon" />
+    <img src="./images/animated-favicon.gif" alt="Animated favicon." />
 </figure>
 
 <p><strong>Bonus</strong></p>
@@ -87,7 +87,7 @@ https://matthewrayfield.com/articles/animating-urls-with-javascript-and-emojis/
 https://juwain.dev/posts/js-in-css-2/
 
 <figure>
-    <img src="./images/js-in-css.gif" alt="Example of setting JS variables in CSS"/>
+    <img src="./images/js-in-css.gif" alt="Setting JS variables in CSS."/>
     <figcaption>Credits: juwain.dev</figcaption>
 </figure>
 
@@ -100,7 +100,7 @@ https://css-tricks.com/using-css-without-html/
 <p>Apparently, some browsers understand a special HTTP Header Link, in which we can pass CSS code without an actual CSS file. And CSS already can contain everything, including meaningful text content in pseudo-elements.</p>
 
 <figure>
-    <img src="./images/header-link.jpg" alt="Example of usage of HTTP Header's field Link"/>
+    <img src="./images/header-link.jpg" alt="Usage of HTTP Header's field Link."/>
     <figcaption>Credits: csstricks.com</figcaption>
 </figure>
 
